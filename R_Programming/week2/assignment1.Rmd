@@ -82,9 +82,6 @@ corr <- function(directory, threshold = 0){
     
     complete_cases <- complete(directory)
     complete_cases <- complete_cases[complete_cases$nobs>=threshold, ]
-    #print(complete_cases["id"])
-    #print(unlist(complete_cases["id"]))
-    #print(complete_cases$id)
     
     if(nrow(complete_cases)>0){
         for(monitor in complete_cases$id){
